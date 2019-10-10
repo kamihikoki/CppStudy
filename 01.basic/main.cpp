@@ -60,9 +60,9 @@ int main() {
     std::string s = "123"s;
 
     // 浮動小数点数型を整数型に変換（切り捨て）
-    int x = 3.14;
+    int ii = 3.14;
     // 3
-    std::cout << x << "\n"s;
+    std::cout << ii << "\n"s;
 
     // 整数型を浮動小数点数型に変換
     double dd = 123;
@@ -116,4 +116,20 @@ int main() {
     std::cout << default_plus(1, 2) << "\n"s;
 
 
+    auto x = 0 ;
+    {
+        auto x = 1 ;
+        {
+            auto x = 2 ;
+            // 2
+            std::cout << x ;
+        }
+        // 1
+        std::cout << x ;
+        x = 42 ;
+        // 42
+        std::cout << x ;
+    }
+    // 0
+    std::cout << x ;
 }
